@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-image: url(https://thumbs.dreamstime.com/b/patr%C3%B3n-con-fondo-de-doodle-ropa-y-accesorios-moda-para-mujeres-dise%C3%B1o-manual-vectores-perfecto-tarjetas-carteles-banners-162656794.jpg);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQuGvpwaUzzKbOVk_bNRBPybaSg9ZPUW4wd98cmMPEMA&s=10); <!-- Cambio de fondo de imagen ya que la anterior lo lograba verse bien las letras de fondo -->
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Permite estirarse al alto total de la pantalla */
