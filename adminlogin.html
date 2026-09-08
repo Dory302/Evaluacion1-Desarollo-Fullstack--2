@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | Administración Mudra</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-login">
+  <header class="admin-login__barra">
+    <a class="admin-marca" href="index.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUClnSJzLBcPckI8kwNNCYgCJlNj1xvrsP6sBdflofMA&s=10" alt="Logo de Tienda Mudra" width="36" height="36">
+      <span><strong>Tienda Mudra</strong></span>
+    </a>
+    <a href="index.html" class="admin-login__volver"><i data-lucide="arrow-left" aria-hidden="true"></i>Volver a la tienda</a>
+  </header>
+  <main class="admin-login__contenido">
+    <section class="admin-login__panel" aria-labelledby="titulo-admin-login">
+      <h1 id="titulo-admin-login">Administración</h1>
+      <p class="admin-login__perfiles">Administrador y vendedor</p>
+      <form id="formulario-inicio-sesion" data-acceso="admin" novalidate>
+        <h2>Iniciar sesión</h2>
+        <p id="estado-login" role="status" hidden></p>
+        <div class="campo-admin">
+          <label for="login-correo">Correo electrónico</label>
+          <input class="control" id="login-correo" name="correo" type="email" maxlength="100" autocomplete="username" required aria-describedby="error-login-correo">
+          <p class="campo-error" id="error-login-correo" hidden></p>
+        </div>
+        <div class="campo-admin">
+          <label for="login-contrasena">Contraseña</label>
+          <div class="admin-login__clave">
+            <input class="control" id="login-contrasena" name="contrasena" type="password" minlength="4" maxlength="10" autocomplete="current-password" required aria-describedby="error-login-contrasena">
+            <button class="boton-icono" id="alternar-clave-admin" type="button" aria-label="Mostrar contraseña" aria-pressed="false" data-tooltip="Mostrar contraseña"><i data-lucide="eye" aria-hidden="true"></i></button>
+          </div>
+          <p class="campo-error" id="error-login-contrasena" hidden></p>
+        </div>
+        <button type="submit" class="boton-admin boton-admin--primario admin-login__ingresar"><i data-lucide="log-in" aria-hidden="true"></i>Ingresar al panel</button>
+      </form>
+      <p class="admin-login__configuracion" id="configuracion-admin" hidden><a href="admin.html?configurar=1">Configurar primer administrador</a></p>
+    </section>
+  </main>
+  <script src="js/validaciones.js"></script>
+  <script src="js/autenticacion.js"></script>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="js/admin-login.js"></script>
+</body>
+</html>

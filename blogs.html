@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Tienda Mudra</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <div class="header-logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUClnSJzLBcPckI8kwNNCYgCJlNj1xvrsP6sBdflofMA&s=10" alt="Logo Tienda Mudra" class="img-logo">
+      <span>Tienda Mudra</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="productos.html">Productos</a> |
+      <a href="nosotros.html">Nosotros</a> |
+      <a href="blogs.html" aria-current="page">Blogs</a> |
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="header-acciones">
+      <div class="header-cuenta" data-cuenta-header>
+        <a class="header-cuenta__inicio" href="iniciosesion.html">Iniciar sesión</a>
+        <a class="header-cuenta__crear" href="registrousuario.html">Crear cuenta</a>
+      </div>
+      <div class="carrito-menu">
+        <button class="header-cart carrito-toggle" type="button" aria-expanded="false" aria-controls="carrito-desplegable">
+          <span aria-hidden="true">🛒</span>
+          Carrito (<span class="cant-carrito" aria-live="polite">0</span>)
+        </button>
+        <section class="carrito-dropdown" id="carrito-desplegable" hidden role="dialog" aria-modal="false" aria-labelledby="carrito-titulo">
+          <div class="carrito-dropdown__encabezado">
+            <h2 class="carrito-dropdown__titulo" id="carrito-titulo">Mi carrito</h2>
+            <button type="button" class="carrito-dropdown__cerrar" data-cerrar-carrito aria-label="Cerrar carrito">&times;</button>
+          </div>
+          <div class="carrito-dropdown__items"></div>
+          <div class="carrito-dropdown__total"><span>Total</span><strong class="carrito-dropdown__total-valor">$0</strong></div>
+          <div class="carrito-dropdown__acciones">
+            <a class="carrito-dropdown__comprar" href="carrito.html#pagar">Comprar</a>
+            <a class="carrito-dropdown__ver" href="carrito.html">Ver carrito</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor blog-listado">
+    <section class="blog-encabezado" aria-labelledby="titulo-blog">
+      <p class="cuenta-intro__etiqueta">Blog Mudra</p>
+      <h1 id="titulo-blog">Historias que nacen en la calle</h1>
+      <p>Ideas, referencias y datos curiosos para entender mejor la ropa urbana que usamos todos los días.</p>
+    </section>
+
+    <section class="blog-grid" aria-label="Artículos del blog">
+      <article class="blog-tarjeta">
+        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Persona con ropa urbana en la ciudad" loading="lazy">
+        <div class="blog-tarjeta__contenido">
+          <p class="blog-tarjeta__categoria">Cultura urbana</p>
+          <h2>Historia de la moda urbana</h2>
+          <p>Desde los deportes de calle y el hip-hop hasta las colecciones actuales, revisamos cómo la ciudad convirtió la ropa cotidiana en una forma de identidad.</p>
+          <a class="boton-secundario" href="detalleblog1.html">Leer artículo</a>
+        </div>
+      </article>
+
+      <article class="blog-tarjeta">
+        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Polerón oscuro de estilo oversize" loading="lazy">
+        <div class="blog-tarjeta__contenido">
+          <p class="blog-tarjeta__categoria">Guía de estilo</p>
+          <h2>Por qué elegir un polerón oversize</h2>
+          <p>Comodidad, capas y proporción: tres razones para que un polerón amplio se convierta en una pieza útil para armar looks urbanos durante todo el año.</p>
+          <a class="boton-secundario" href="detalleblog2.html">Leer artículo</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <strong>Tienda Mudra</strong>
+      <div class="footer-links">
+        <a href="productos.html">Polerones</a> |
+        <a href="productos.html">Pantalones</a> |
+        <a href="productos.html">Accesorios</a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <label for="newsletter-blogs">Únete a nuestro Newsletter</label>
+      <div class="newsletter-box">
+        <input id="newsletter-blogs" type="email" placeholder="Ingresa tu correo">
+        <button type="button">Suscribirse</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/almacen.js"></script>
+  <script src="js/carritoylogica.js"></script>
+  <script src="js/autenticacion.js"></script>
+</body>
+</html>
